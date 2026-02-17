@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Universe – ETITC Advanced Learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --etitc-green: #90c657;
+            --etitc-red: #ff574d;
+            --python-blue: #3776ab;
+            --python-yellow: #ffd43b;
+            --dark-bg: #1e1e1e;
+        }
+
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-height: 1.6; scroll-behavior: smooth; }
+
+        /* Header Dinámico */
+        header { background: #fff; border-bottom: 5px solid var(--etitc-green); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { font-size: 24px; font-weight: bold; color: #444; }
+        .logo span { color: var(--etitc-green); }
+        
+        nav a { text-decoration: none; color: #555; font-weight: 600; margin-left: 20px; font-size: 14px; transition: 0.3s; }
+        nav a:hover { color: var(--etitc-green); }
+
+        /* Hero Mejorado */
+        .hero { 
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1350&q=80');
+            height: 60vh; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center;
+        }
+
+        /* Sección de Hitos - Timeline */
+        .timeline { padding: 80px 10%; background: #f9f9f9; }
+        .milestone { border-left: 4px solid var(--etitc-green); padding-left: 20px; margin-bottom: 30px; position: relative; }
+        .milestone::before { content: ''; width: 15px; height: 15px; background: var(--etitc-green); position: absolute; left: -10px; border-radius: 50%; top: 5px; }
+
+        /* Simulación de Terminal de Código */
+        .code-window {
+            background: var(--dark-bg); color: #f8f8f2; border-radius: 8px; padding: 20px;
+            font-family: 'Courier New', Courier, monospace; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 600px; margin: 40px auto; text-align: left;
+        }
+        .code-keyword { color: #ff79c6; }
+        .code-func { color: #50fa7b; }
+        .code-string { color: #f1fa8c; }
+
+        /* Grid de Ecosistema */
+        .ecosystem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px 0; }
+        .lib-card { background: white; padding: 25px; border-radius: 10px; border: 1px solid #eee; transition: 0.3s; }
+        .lib-card:hover { transform: translateY(-5px); border-color: var(--etitc-green); }
+        .lib-card i { font-size: 30px; color: var(--python-blue); margin-bottom: 15px; }
+
+        /* Footer */
+        footer { background: #2c3e50; color: white; padding: 60px 10% 20px; }
+        .btn-cta { background: var(--etitc-green); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PYTHON<span>ETITC</span></div>
+        <nav>
+            <a href="#intro">Introducción</a>
+            <a href="#hitos">Hitos</a>
+            <a href="#librerias">Ecosistema</a>
+            <a href="#futuro">Futuro</a>
+            <a href="#" style="background: var(--etitc-red); color: white; padding: 8px 15px; border-radius: 4px;">Inscribirse</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1 style="font-size: 3.5em; margin: 0;">El Lenguaje que Mueve al Mundo</h1>
+            <p style="font-size: 1.4em; color: var(--python-yellow);">Simple para humanos. Potente para máquinas.</p>
+        </div>
+    </section>
+
+    <section id="intro" style="padding: 80px 10%; text-align: center;">
+        <h2>¿Por qué Python?</h2>
+        <p style="max-width: 800px; margin: 0 auto;">Python es un lenguaje de alto nivel cuya filosofía hace hincapié en la legibilidad del código. Es la herramienta preferida para la Ciencia de Datos, Inteligencia Artificial y Automatización.</p>
+        
+        <div class="code-window">
+            <div><span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd</div>
+            <div><span class="code-keyword">def</span> <span class="code-func">futuro_itc</span>(estudiante):</div>
+            <div style="padding-left: 20px;"><span class="code-keyword">if</span> estudiante.aprende_python:</div>
+            <div style="padding-left: 40px;"><span class="code-keyword">return</span> <span class="code-string">"Éxito Laboral Asegurado"</span></div>
+            <div><span class="code-func">print</span>(futuro_itc(tu))</div>
+        </div>
+    </section>
+
+    <section id="hitos" class="timeline">
+        <h2 style="text-align: center; margin-bottom: 50px;">Línea de Tiempo: Hitos de Python</h2>
+        <div class="milestone">
+            <h3>1991 - El Nacimiento</h3>
+            <p>Guido van Rossum publica la versión 0.9.0. El nombre viene del grupo de comedia "Monty Python".</p>
+        </div>
+        <div class="milestone">
+            <h3>2000 - Python 2.0</h3>
+            <p>Se introducen las listas por comprensión y el sistema de recolección de basura (Garbage Collector).</p>
+        </div>
+        <div class="milestone">
+            <h3>2008 - La Gran Revolución (v3.0)</h3>
+            <p>Una versión que no era compatible hacia atrás, diseñada para corregir fallos de diseño fundamentales del lenguaje.</p>
+        </div>
+        <div class="milestone">
+            <h3>2024 - Python 3.13 y el Futuro</h3>
+            <p>Eliminación del GIL (Global Interpreter Lock) para permitir un verdadero multi-threading y mayor velocidad.</p>
+        </div>
+    </section>
+
+    <section id="librerias" style="padding: 80px 10%;">
+        <h2 style="text-align: center;">El Poder de las Librerías</h2>
+        <p style="text-align: center;">La verdadera fuerza de Python reside en sus bibliotecas especializadas.</p>
+        <div class="ecosystem-grid">
+            <div class="lib-card">
+                <i class="fas fa-brain"></i>
+                <h3>Scikit-Learn</h3>
+                <p>La librería estándar para Machine Learning y algoritmos de clasificación.</p>
+            </div>
+            <div class="lib-card">
+                <i class="fas fa-database"></i>
+                <h3>Pandas</h3>
+                <p>Análisis y manipulación de datos masivos con estructuras de "DataFrames".</p>
+            </div>
+            <div class="lib-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Django</h3>
+                <p>Framework de desarrollo web de "alto nivel" que fomenta el desarrollo rápido.</p>
+            </div>
+            <div class="lib-card">
+                <i class="fas fa-flask"></i>
+                <h3>FastAPI</h3>
+                <p>El estándar moderno para crear APIs de alto rendimiento con validación de tipos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="futuro" style="padding: 80px 10%; background: var(--etitc-red); color: white;">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2>El Futuro: Más allá de la Pantalla</h2>
+                <p>Python se está expandiendo hacia campos antes dominados por C++. Con proyectos como <strong>Mojo</strong> y <strong>PyScript</strong>, ahora Python puede correr directamente en el navegador y a velocidades de lenguaje de bajo nivel.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li><i class="fas fa-check-circle"></i> Integración profunda con Computación Cuántica.</li>
+                    <li><i class="fas fa-check-circle"></i> Dominio absoluto en Orquestación de Nube (DevOps).</li>
+                    <li><i class="fas fa-check-circle"></i> Estándar en la Industria Aeroespacial.</li>
+                </ul>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <i class="fas fa-rocket" style="font-size: 150px; opacity: 0.2;"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            <div>
+                <h3>Sobre ETITC Python</h3>
+                <p>Formamos los líderes tecnológicos que diseñarán la Inteligencia Artificial del mañana.</p>
+            </div>
+            <div>
+                <h3>Enlaces Rápidos</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li>Documentación Oficial</li>
+                    <li>Comunidad Python Colombia</li>
+                    <li>Proyectos de Grado</li>
+                </ul>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 13px;">
+            © 2026 Escuela Tecnológica Instituto Técnico Central - Programa de Ingeniería de Software
+        </div>
+    </footer>
+
+</body>
+</html>
