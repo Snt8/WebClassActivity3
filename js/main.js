@@ -1,0 +1,1 @@
+// La página es estática; los enlaces y el desplazamiento suave funcionan sin dependencias.
